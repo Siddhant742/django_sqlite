@@ -3,4 +3,13 @@
 <p>From {{flight.origin}} to {{flight.destination}}</p>
 <p>Departure: {{flight.origin}}</p>
 <p>Arrival: {{flight.destination}}</p>
+
+<h2>Passengers</h2>
+{%for passenger in passengers%}
+{{passenger.first}} {{passenger.last}}<br>
+
+{%empty%}
+<p>No passengers for this flight.</p>
+
+{%endfor%}
 {%endblock%}
