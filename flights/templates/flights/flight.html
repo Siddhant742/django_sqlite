@@ -5,6 +5,7 @@
 <p>Arrival: {{flight.destination}}</p>
 
 <h2>Passengers</h2>
+<ul>
 {%for passenger in passengers%}
 {{passenger.first}} {{passenger.last}}<br>
 
@@ -12,4 +13,6 @@
 <p>No passengers for this flight.</p>
 
 {%endfor%}
+</ul>
+<a href = "{% url 'index' %}">Back to Flight List</a>
 {%endblock%}
